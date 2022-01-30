@@ -19,10 +19,12 @@ $("#btn3").on("click", function () {
 });
 
 $("#btn").on("click", function () {
+    const mainPlayer = document.querySelector("#imgs-wrap .res img");
+    console.log("mainPlayer.id: " + mainPlayer.id);
     const num = Math.ceil(Math.random() * 3);
     console.log(num);
 
-    //進撃の巨人の場合
+    //進撃の巨人(ミカサ)の場合
     if (num == 1) {
         const images =
             '<img id="img-mikasa" src="./img/atack/mikasa.jpg" alt="">';
@@ -32,46 +34,57 @@ $("#btn").on("click", function () {
             "justify-content": "space-around",
         });
 
-        const doc = document.querySelector(".res img");
-        console.log(doc.id);
-        if (doc.id == "ele") {
+        const doc = document.querySelector("#heroin img");
+        console.log("doc.id: " + doc.id);
+        if (mainPlayer.id == "ele" && doc.id == "img-mikasa") {
+            console.log(true);
             bgm4.pause();
             bgm4.currentTime = 0;
 
             bgm1.play();
         } else {
+            console.log("Not ele");
+            bgm1.pause();
+            bgm1.currentTime = 0;
+            
             bgm4.play();
         }
+
+        //呪術廻戦の場合
     } else if (num == 2) {
-        const images = '<img id="img-mikasa" src="./img/juju/rika.jpg" alt="">';
+        const images = '<img id="img-rika" src="./img/juju/rika.jpg" alt="">';
         $("#heroin").html(images);
         $("#imgs-wrap").css({
             display: "flex",
             "justify-content": "space-around",
         });
 
-        const doc = document.querySelector(".res img");
-        console.log(doc.id);
-        if (doc.id == "ita") {
+        const doc = document.querySelector("#heroin img");
+        console.log("doc.id: " + doc.id);
+        if (mainPlayer.id == "ita" && doc.id == "img-rika") {
+            console.log(true);
             bgm4.pause();
             bgm4.currentTime = 0;
 
             bgm2.play();
         } else {
+            bgm2.pause();
+            bgm2.currentTime = 0;
+
             bgm4.play();
         }
     } else {
         const images =
-            '<img id="img-mikasa" src="./img/slum/haruko.jpeg" alt="">';
+            '<img id="img-haruko" src="./img/slum/haruko.jpeg" alt="">';
         $("#heroin").html(images);
         $("#imgs-wrap").css({
             display: "flex",
             "justify-content": "space-around",
         });
 
-        const doc = document.querySelector(".res img");
-        console.log(doc.id);
-        if (doc.id == "sak") {
+        const doc = document.querySelector("#heroin img");
+        console.log("doc.id: " + doc.id);
+        if (mainPlayer.id == "sak" && doc.id == "img-haruko") {
             // bgm1.stop();
             // bgm2.stop();
             // bgm4.stop();
@@ -88,8 +101,6 @@ $("#btn").on("click", function () {
     }
 });
 
-
-
 audioArray = {
     bgm1: "./audio/at.mp3",
     bgm2: "./audio/jk.mp3",
@@ -97,8 +108,8 @@ audioArray = {
     bgm4: "./audio/notgood.mp3",
 };
 
-const audio = function (audioFile) { 
-    if(audioFile === audioArray.bgm1 ){
+const audio = function (audioFile) {
+    if (audioFile === audioArray.bgm1) {
         console.log(true);
     }
     const bgm1 = new Audio("op.ogg");
@@ -106,4 +117,4 @@ const audio = function (audioFile) {
     btn.addEventListener("click", () => {
         bgm1.play();
     });
-}
+};
