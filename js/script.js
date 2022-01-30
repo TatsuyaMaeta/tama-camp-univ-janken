@@ -38,6 +38,12 @@ $("#btn").on("click", function () {
         console.log("doc.id: " + doc.id);
         if (mainPlayer.id == "ele" && doc.id == "img-mikasa") {
             console.log(true);
+            bgm1.pause();
+            bgm1.currentTime = 0;
+            bgm2.pause();
+            bgm2.currentTime = 0;
+            bgm3.pause();
+            bgm3.currentTime = 0;
             bgm4.pause();
             bgm4.currentTime = 0;
 
@@ -46,7 +52,11 @@ $("#btn").on("click", function () {
             console.log("Not ele");
             bgm1.pause();
             bgm1.currentTime = 0;
-            
+            bgm2.pause();
+            bgm2.currentTime = 0;
+            bgm3.pause();
+            bgm3.currentTime = 0;
+
             bgm4.play();
         }
 
@@ -63,13 +73,25 @@ $("#btn").on("click", function () {
         console.log("doc.id: " + doc.id);
         if (mainPlayer.id == "ita" && doc.id == "img-rika") {
             console.log(true);
+            bgm1.pause();
+            bgm1.currentTime = 0;
+            bgm2.pause();
+            bgm2.currentTime = 0;
+            bgm3.pause();
+            bgm3.currentTime = 0;
             bgm4.pause();
             bgm4.currentTime = 0;
 
             bgm2.play();
         } else {
+            bgm1.pause();
+            bgm1.currentTime = 0;
             bgm2.pause();
             bgm2.currentTime = 0;
+            bgm3.pause();
+            bgm3.currentTime = 0;
+            bgm4.pause();
+            bgm4.currentTime = 0;
 
             bgm4.play();
         }
@@ -85,16 +107,25 @@ $("#btn").on("click", function () {
         const doc = document.querySelector("#heroin img");
         console.log("doc.id: " + doc.id);
         if (mainPlayer.id == "sak" && doc.id == "img-haruko") {
-            // bgm1.stop();
-            // bgm2.stop();
-            // bgm4.stop();
+            bgm1.pause();
+            bgm1.currentTime = 0;
+            bgm2.pause();
+            bgm2.currentTime = 0;
+            bgm3.pause();
+            bgm3.currentTime = 0;
             bgm4.pause();
             bgm4.currentTime = 0;
 
             bgm3.play();
         } else {
+            bgm1.pause();
+            bgm1.currentTime = 0;
+            bgm2.pause();
+            bgm2.currentTime = 0;
             bgm3.pause();
             bgm3.currentTime = 0;
+            bgm4.pause();
+            bgm4.currentTime = 0;
 
             bgm4.play();
         }
