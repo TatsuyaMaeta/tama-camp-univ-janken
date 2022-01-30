@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>じゃんけんアプリ</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/btn.css" />
+    </head>
+
+    <body>
+        <h1 class="page-title">あなたの好きな漫画はどれ？</h1>
+
+        <div class="box">
+            <!-- <span class="box-title">あなたの好きな漫画はどれ？</span> -->
+            <div class="box-item">
+                <button id="btn1" class="form-control">進撃の巨人</button>
+                <button id="btn2" class="form-control">呪術廻戦</button>
+                <button id="btn3" class="form-control">
+                    ＳＬＡＭ ＤＵＮＫ
+                </button>
+            </div>
+            <div id="imgs-wrap">
+                <div id="" class="res"></div>
+                <div id="heroin"></div>
+                <div id="audio">
+                    <audio id="bgm1" preload loop>
+                        <source src="./audio/at.mp3" type="audio/mp3" />
+                    </audio>
+                    <audio id="bgm2" preload loop>
+                        <source src="./audio/jk.mp3" type="audio/mp3" />
+                    </audio>
+                    <audio id="bgm3" preload loop>
+                        <source src="./audio/sd.mp3" type="audio/mp3" />
+                    </audio>
+                    <audio id="bgm4" preload>
+                        <source src="./audio/notgood.mp3" type="audio/mp3" />
+                    </audio>
+                </div>
+            </div>
+
+            <div id="btn-wrapper">
+                <button id="btn" class="btnCSS bgskew">
+                    <span>これにする</span>
+                </button>
+            </div>
+        </div>
+        <div class="text-center result"></div>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
