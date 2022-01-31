@@ -137,6 +137,12 @@ function addHeroinImage(mangaIndex) {
     });
 }
 function reverseImage(flg) {
+    // 画像反転する
+    // https://www.it-the-best.com/entry/css-transform-scale_reverse
+
+    // 既にCSSファイルで書いている内容をクラスを割り当てて対応させる
+    // https://qiita.com/kazTera/items/ab5dd9fb5b2579b25c4d
+
     if (flg) {
         $("#heroin").removeClass("reverse");
     } else {
