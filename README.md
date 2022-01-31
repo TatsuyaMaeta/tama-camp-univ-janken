@@ -1,7 +1,7 @@
 # tama-camp-univ-janken
-2022年1月に実施したCAMPの深夜質問対応時に作成したじゃんけんアプリです
+2022年1月に実施したCAMPの深夜質問対応時に作成したじゃんけんアプリ(漫画ヒロインマッチングゲーム)です
 
-### GitHub Pagesにて作成したサイト
+### GitHub Pagesにて公開しているこのソースコードで作成した漫画ヒロインマッチングゲーム
 https://tatsuyamaeta.github.io/tama-camp-univ-janken/
 
 ### 音声の再生方法
