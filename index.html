@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- ファビコンの設定の方法
+        https://techacademy.jp/magazine/30972 -->
+        <link rel="icon" href="./img/fav/comic.ico">
+
+        <title>漫画ヒロインマッチング</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- ボタンのCSS用に切り分けて作成したCSSファイル -->
+        <link rel="stylesheet" href="css/btn.css" />
+    </head>
+
+    <body>
+        <h1 class="page-title">あなたの好きな漫画はどれ？<br>漫画ヒロインマッチング </h1>
+
+        <div class="box">
+            <!-- <span class="box-title">あなたの好きな漫画はどれ？</span> -->
+            <div class="box-item">
+                <button id="btn1" class="form-control">進撃の巨人</button>
+                <button id="btn2" class="form-control">鬼滅の刃</button>
+                <button id="btn3" class="form-control">
+                    ＳＬＡＭ ＤＵＮＫ
+                </button>
+            </div>
+            <div id="imgs-wrap">
+                <div id="" class="res"></div>
+                <div id="heroin"></div>
+                <div id="audio">
+                    
+                    <audio id="bgm1" preload>
+                        <source src="./audio/ok_sound.mp3" type="audio/mp3" />
+                    </audio>
+                    <audio id="bgm2" preload>
+                        <source src="./audio/bad_sound.mp3" type="audio/mp3" />
+                    </audio>
+                </div>
+            </div>
+
+            <div id="btn-wrapper">
+                <button id="btn" class="btnCSS bgskew">
+                    <span>これにする</span>
+                </button>
+            </div>
+        </div>
+        <div class="text-center result"></div>
+
+        <script src="./js/jquery-3.3.1.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
