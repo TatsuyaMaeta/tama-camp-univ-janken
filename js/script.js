@@ -136,6 +136,7 @@ function addHeroinImage(mangaIndex) {
         "justify-content": "space-around",
     });
 }
+
 function reverseImage(flg) {
     // 画像反転する
     // https://www.it-the-best.com/entry/css-transform-scale_reverse
