@@ -24,7 +24,6 @@ body {
 .box {
     /* display: flex;
     justify-content: space-between; */
-    width: 1000px;
     margin: 24px auto 64px;
     font-size: 18px;
     text-align: center;
@@ -62,10 +61,10 @@ body {
 /* #btn-wrapper {
     text-align: center; 
 } */
-.res img{
+.res img {
     border-radius: 10px;
 }
 
-#img-mikasa{
+#img-mikasa {
     width: 400px;
 }
