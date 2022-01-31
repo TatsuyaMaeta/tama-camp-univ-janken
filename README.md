@@ -9,3 +9,6 @@ https://blog.katsubemakito.net/html5/audio1
 
 ### 音源サイト(フリー)
 https://soundeffect-lab.info/sound/search.php?s=%E6%AD%A3%E8%A7%A3
+
+### オブジェクトのinded番号での操作の作法
+https://takabus.com/tips/102/
