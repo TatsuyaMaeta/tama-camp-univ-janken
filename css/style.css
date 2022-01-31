@@ -65,6 +65,6 @@ body {
     border-radius: 10px;
 }
 
-#img-mikasa {
-    width: 400px;
+.reverse{
+    transform:scale(-1,1);
 }

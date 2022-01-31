@@ -136,7 +136,13 @@ function addHeroinImage(mangaIndex) {
         "justify-content": "space-around",
     });
 }
-
+function reverseImage(flg) {
+    if (flg) {
+        $("#heroin").removeClass("reverse");
+    } else {
+        $("#heroin").addClass("reverse");
+    }
+}
 function controlAudio(flg) {
     if (flg) {
         bgm1.pause();
@@ -178,6 +184,8 @@ $("#btn").on("click", function () {
         mainPlayer.id == Object.values(mangaObj)[num].hero.id &&
         doc.id == Object.values(mangaObj)[num].heroin.id;
     console.log(judge_flg);
+
+    reverseImage(judge_flg);
 
     controlAudio(judge_flg);
 
