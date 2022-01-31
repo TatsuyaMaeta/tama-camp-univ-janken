@@ -1,20 +1,27 @@
 const bgm1 = document.querySelector("#bgm1");
 const bgm2 = document.querySelector("#bgm2");
-const bgm3 = document.querySelector("#bgm3");
-const bgm4 = document.querySelector("#bgm4");
 
 $("#btn1").on("click", function () {
-    $(".res").html('<img id="ele" src="./img/atack/elen.jpg" alt="">');
+    $(".res").html(
+        `<<進撃の巨人 エレン・イェーガー>><br>
+            <img id="ele" src="./img/atack/elen.jpg" alt="">`
+    );
     $("#btn").css("display", "block");
 });
 
 $("#btn2").on("click", function () {
-    $(".res").html('<img id="ita" src="./img/juju/itadori.png" alt="">');
+    $(".res").html(
+        `<<鬼滅の刃 竈門炭治郎>>
+            <br><img id="ita" src="./img/kimetsu/tanjiro.jpg" alt="">`
+    );
     $("#btn").css("display", "block");
 });
 
 $("#btn3").on("click", function () {
-    $(".res").html('<img id="sak" src="./img/slum/sakuragi.jpg" alt="">');
+    $(".res").html(
+        `<<ＳＬＡＭ ＤＵＮＫ 桜木花道>><br>
+            <img id="sak" src="./img/slum/sakuragi.jpg" alt="">`
+    );
     $("#btn").css("display", "block");
 });
 
@@ -26,8 +33,8 @@ $("#btn").on("click", function () {
 
     //進撃の巨人(ミカサ)の場合
     if (num == 1) {
-        const images =
-            '<img id="img-mikasa" src="./img/atack/mikasa.jpg" alt="">';
+        const images = `<<進撃の巨人 ミカサ>><br>
+            <img id="img-mikasa" src="./img/atack/mikasa.jpg" alt="">`;
         $("#heroin").html(images);
         $("#imgs-wrap").css({
             display: "flex",
@@ -42,27 +49,21 @@ $("#btn").on("click", function () {
             bgm1.currentTime = 0;
             bgm2.pause();
             bgm2.currentTime = 0;
-            bgm3.pause();
-            bgm3.currentTime = 0;
-            bgm4.pause();
-            bgm4.currentTime = 0;
 
             bgm1.play();
         } else {
-            console.log("Not ele");
             bgm1.pause();
             bgm1.currentTime = 0;
             bgm2.pause();
             bgm2.currentTime = 0;
-            bgm3.pause();
-            bgm3.currentTime = 0;
 
-            bgm4.play();
+            bgm2.play();
         }
 
-        //呪術廻戦の場合
+        //進撃の場合
     } else if (num == 2) {
-        const images = '<img id="img-rika" src="./img/juju/rika.jpg" alt="">';
+        const images =
+            '<<鬼滅の刃 カナヲ>><br><img id="img-knw" src="./img/kimetsu/kanawo.jpg" alt="">';
         $("#heroin").html(images);
         $("#imgs-wrap").css({
             display: "flex",
@@ -71,33 +72,29 @@ $("#btn").on("click", function () {
 
         const doc = document.querySelector("#heroin img");
         console.log("doc.id: " + doc.id);
-        if (mainPlayer.id == "ita" && doc.id == "img-rika") {
+        if (mainPlayer.id == "ita" && doc.id == "img-knw") {
             console.log(true);
+            // 正解と不正解を停止
             bgm1.pause();
             bgm1.currentTime = 0;
             bgm2.pause();
             bgm2.currentTime = 0;
-            bgm3.pause();
-            bgm3.currentTime = 0;
-            bgm4.pause();
-            bgm4.currentTime = 0;
 
-            bgm2.play();
+            // 正解を再生
+            bgm1.play();
         } else {
+            // 正解と不正解を停止
             bgm1.pause();
             bgm1.currentTime = 0;
             bgm2.pause();
             bgm2.currentTime = 0;
-            bgm3.pause();
-            bgm3.currentTime = 0;
-            bgm4.pause();
-            bgm4.currentTime = 0;
 
-            bgm4.play();
+            // 正解を再生
+            bgm2.play();
         }
     } else {
         const images =
-            '<img id="img-haruko" src="./img/slum/haruko.jpeg" alt="">';
+            '<<スラムダンク 晴子さん>><br><img id="img-haruko" src="./img/slum/haruko.jpeg" alt="">';
         $("#heroin").html(images);
         $("#imgs-wrap").css({
             display: "flex",
@@ -107,45 +104,24 @@ $("#btn").on("click", function () {
         const doc = document.querySelector("#heroin img");
         console.log("doc.id: " + doc.id);
         if (mainPlayer.id == "sak" && doc.id == "img-haruko") {
+            console.log(true);
+            // 正解と不正解を停止
             bgm1.pause();
             bgm1.currentTime = 0;
             bgm2.pause();
             bgm2.currentTime = 0;
-            bgm3.pause();
-            bgm3.currentTime = 0;
-            bgm4.pause();
-            bgm4.currentTime = 0;
 
-            bgm3.play();
+            // 正解を再生
+            bgm1.play();
         } else {
+            // 正解と不正解を停止
             bgm1.pause();
             bgm1.currentTime = 0;
             bgm2.pause();
             bgm2.currentTime = 0;
-            bgm3.pause();
-            bgm3.currentTime = 0;
-            bgm4.pause();
-            bgm4.currentTime = 0;
 
-            bgm4.play();
+            // 不正解を再生
+            bgm2.play();
         }
     }
 });
-
-audioArray = {
-    bgm1: "./audio/at.mp3",
-    bgm2: "./audio/jk.mp3",
-    bgm3: "./audio/sd.mp3",
-    bgm4: "./audio/notgood.mp3",
-};
-
-const audio = function (audioFile) {
-    if (audioFile === audioArray.bgm1) {
-        console.log(true);
-    }
-    const bgm1 = new Audio("op.ogg");
-
-    btn.addEventListener("click", () => {
-        bgm1.play();
-    });
-};

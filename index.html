@@ -2,20 +2,26 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8" />
-        <title>じゃんけんアプリ</title>
+        <!-- ファビコンの設定の方法
+        https://techacademy.jp/magazine/30972 -->
+        <link rel="icon" href="./img/fav/comic.ico">
+
+        <title>漫画ヒロインマッチング</title>
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/style.css" />
+
+        <!-- ボタンのCSS用に切り分けて作成したCSSファイル -->
         <link rel="stylesheet" href="css/btn.css" />
     </head>
 
     <body>
-        <h1 class="page-title">あなたの好きな漫画はどれ？</h1>
+        <h1 class="page-title">あなたの好きな漫画はどれ？<br>漫画ヒロインマッチング </h1>
 
         <div class="box">
             <!-- <span class="box-title">あなたの好きな漫画はどれ？</span> -->
             <div class="box-item">
                 <button id="btn1" class="form-control">進撃の巨人</button>
-                <button id="btn2" class="form-control">呪術廻戦</button>
+                <button id="btn2" class="form-control">鬼滅の刃</button>
                 <button id="btn3" class="form-control">
                     ＳＬＡＭ ＤＵＮＫ
                 </button>
@@ -25,16 +31,10 @@
                 <div id="heroin"></div>
                 <div id="audio">
                     <audio id="bgm1" preload>
-                        <source src="./audio/at.mp3" type="audio/mp3" />
+                        <source src="./audio/ok_sound.mp3" type="audio/mp3" />
                     </audio>
                     <audio id="bgm2" preload>
-                        <source src="./audio/jk.mp3" type="audio/mp3" />
-                    </audio>
-                    <audio id="bgm3" preload>
-                        <source src="./audio/sd.mp3" type="audio/mp3" />
-                    </audio>
-                    <audio id="bgm4" preload>
-                        <source src="./audio/notgood.mp3" type="audio/mp3" />
+                        <source src="./audio/bad_sound.mp3" type="audio/mp3" />
                     </audio>
                 </div>
             </div>
@@ -47,7 +47,7 @@
         </div>
         <div class="text-center result"></div>
 
-        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="./js/jquery-3.3.1.min.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>
