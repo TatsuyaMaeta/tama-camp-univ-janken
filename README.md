@@ -5,7 +5,7 @@
 https://tatsuyamaeta.github.io/tama-camp-univ-janken/
 
 ### GitHub Pages　の使い方
-https://t2ym.notion.site/Github-Pages-e24772ae330d4a76abd287b370510046
+https://t2ym.notion.site/Github-Pages-e24772ae330d4a76abd287b370510046 <br>
 ※GitHub PagesとはGitHubにアップロードしたソースコードを元にサイトと同じ様にwebブラウザにて表示できる静的ホスティングサービスです
 
 ### 音声の再生方法
