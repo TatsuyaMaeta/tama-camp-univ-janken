@@ -2,7 +2,9 @@
 2022年1月に実施したCAMPの深夜質問対応時に作成したじゃんけんアプリ(漫画ヒロインマッチングゲーム)です
 
 ### GitHub Pagesにて公開しているこのソースコードで作成した漫画ヒロインマッチングゲーム
-https://tatsuyamaeta.github.io/tama-camp-univ-janken/
+github pages: https://tatsuyamaeta.github.io/tama-camp-univ-janken/
+
+netlify: https://peaceful-gs-084084.netlify.app/
 
 ### GitHub Pages　の使い方
 https://t2ym.notion.site/Github-Pages-e24772ae330d4a76abd287b370510046 <br>
